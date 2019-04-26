@@ -1,13 +1,14 @@
-let input = document.getElementById('in');
-let output = document.getElementById('op');
-let table = [/*' ', '!', '"', '#', '$', '%', '&', "'", '(', ')', '*', '+', ',', '-', '.', '/', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', ':', ';', '<', '=', '>', '?', '@',*/ 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '[', "\\", ']', '^', '_', '`', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '{', '|', '}', '~', 'DEL'];
-let arr = [];
-let barr = [];
-let y = [];
-let m;
-let result;
-let strr
-let less = true;
+var input = document.getElementById('in');
+var output = document.getElementById('op');
+var table = [/*' ', '!', '"', '#', '$', '%', '&', "'", '(', ')', '*', '+', ',', '-', '.', '/', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', ':', ';', '<', '=', '>', '?', '@',*/ 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '[', "\\", ']', '^', '_', '`', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '{', '|', '}', '~', 'DEL'];
+var arr = [];
+var barr = [];
+var y = [];
+var m;
+var result;
+var strr
+var less = true;
+var tafcha;
 console.log(table);
 
 function reverse_string(string) {
@@ -20,7 +21,7 @@ function reset() { y = []; result = ''; console.log(result, strr, y); strr = '';
 function test() {
 
     reset();
-    let neww = input.value;
+    var neww = input.value;
 
     strr = reverse_string(neww);
     console.log(strr);
@@ -46,12 +47,13 @@ function test() {
         }
     }
     result = y.reverse().join('');
-    console.log(insert(result.match(/.{1,7}/g).join('0'), '0', 0));
+     tafcha = insert(result.match(/.{1,7}/g).join('0'), '0', 0);
+    console.log(tafcha);
 
     //if (less) {
       //  output.innerHTML = insert(result.match(/.{1,6}/g).join('0'), '00', 0);
     //} else {
-        output.innerHTML = insert(result.match(/.{1,7}/g).join('0'), '0', 0);
+        output.innerHTML = tafcha;
     //}
     console.log("01101101011001010110010001100001011011010110100101101110");
 }

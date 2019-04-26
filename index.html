@@ -6,7 +6,7 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>decimal to binary</title>
+  <title>text to binary</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -38,17 +38,19 @@
     <div class="row">
       <div class="one-half column" style="margin-top: 25%">
         <p id="p1">enter a query :</p>
-        <!--<textarea id="in" placeholder=""></textarea>-->
-        <input type="text"  id="in" onkeypress="return isNumberKey(event);" step="1">
+        <textarea id="in" placeholder=""></textarea>
+        <!--<input type="text"  id="in" step="1">-->
         </br>
-        <button id="convert" onclick="test()">convert</button>
-        <button id="swap" onclick="reset()">swap</button>
+        <button id="convert" onclick="convertion()">convert</button>
+        <button id="swap" onclick="cwap()">swap</button>
         <p id="p2">binary number :</p>
         <textarea id="op" placeholder="" readonly></textarea>
       </div>
     </div>
   </div>
+  <script src='./wtaver.js'></script>
   <script src='./convert.js'></script>
+    <script src='./swap.js'></script>
   <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
